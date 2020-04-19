@@ -5,10 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=a3ce8e966aef0ecef3ec77d435bc9197&query=war`
-let imagePath = `https://image.tmdb.org/t/p/w300_and_h450_bestv2`;
 
-const MyTrying = () => {
+const MyTrying = ({ title, sub }) => {
+    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=a3ce8e966aef0ecef3ec77d435bc9197&query=${title}`
+    let imagePath = `https://image.tmdb.org/t/p/w300_and_h450_bestv2`;
     const [cat, setCat] = useState("")
 
     const info = () => {
@@ -25,10 +25,10 @@ const MyTrying = () => {
     }, [])
 
     var settings = {
-        dots: true,
+
         infinite: false,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 8,
         slidesToScroll: 4,
         initialSlide: 0,
         responsive: [
@@ -44,15 +44,15 @@ const MyTrying = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
                     initialSlide: 2
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             }
@@ -60,11 +60,13 @@ const MyTrying = () => {
     };
     return (
         <div className="cont">
-            <h2>Popular Movie</h2>
+            <h4>{sub}</h4>
             <Slider {...settings} className="slick">
                 {cat ? cat.map(data =>
                     (<div className="kenareham">
-                        <img src={imagePath + data.poster_path} alt="" />
+                        <div className='posterBox'>
+                            <img src={imagePath + data.poster_path} alt="" />
+                        </div>
                         <h3>{data.title}</h3>
                     </div>))
                     : null}

@@ -8,7 +8,7 @@ const Result = ({ result, openPopup }) => {
 
     return (
 
-        <div className=" box" onClick={() => openPopup(result.id)}>
+        <div className="result box" onClick={() => openPopup(result.id)}>
             <div className="imgBox">
                 <img src={imagePath + result.poster_path} alt="" />
             </div>

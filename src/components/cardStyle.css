@@ -16,18 +16,18 @@
 
 .box{
     position: relative;
-    width: 200px;
-    height: 200px;
-    display: flex;
+    width: 300px;
+    height: 400px;
+ /*    display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin: 40px;
     background: #060c21;
     transition: 0.4s;
 }
 
 .box:hover{
-    height: 380px;
+    height: 530px;
 }
 
 .box .imgBox{
@@ -131,15 +131,9 @@
 
 @media(max-width:960px){
     .box{
-
-        width: 100px;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 40px;
-        background: #060c21;
-        transition: 0.4s;
+        width: 250px;
+        height: 200px;
+       
     }
 
     .box:hover{

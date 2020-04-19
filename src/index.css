@@ -32,8 +32,8 @@ h1{
 
 main{
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
+  /* min-width: 960px; */
+  /* margin: 0 auto; */
 }
 
 section{
@@ -57,21 +57,33 @@ section{
   font-weight: 300;
 
   transition: 0.4s ease-out;
-    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.479);
+  box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.479);
 
 }
 
 .searchbox:focus{
   box-shadow: 0 0 8px 3px #4484C4;
 }
+.myResult h2{
+  font-size: 30px;
+}
+
 
 .results{
-  display: flex;
+ /*  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 -15px;
+  justify-content: center; */
+
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 0px;
+  grid-row-gap:0px;
+
+  margin: 0 auto;
   transition: 0.4s;
 }
+
+
 /* .results .result{
   width: 33,333%;
   min-width: 100px;
@@ -184,10 +196,12 @@ margin-bottom: 30px;
 
 @media(max-width:960px){
 
-  main .myResult{
-    display: flex;
-    flex-direction: row;
-  }
+.results{
+  display: inline-grid;
+  grid-template-columns: auto ;
+  grid-column-gap:0px;
+ 
+}
   header{
     width: 75%;
   }
@@ -211,20 +225,22 @@ margin-bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+
 }
 
+
 .kenareham img{
-  width: 100%;
-  height: 450px;
+  height: 300px;
 }
 
 .kenareham h3{
   color: #fff;
-  height: 70px;
+  height: 90px;
   text-align: center;
   padding: 10px;
   background: rgba(85, 85, 85, 0.267);
 }
+
 
 .slick{
   margin-bottom: 30px;
@@ -235,40 +251,29 @@ margin-bottom: 30px;
   margin: 0 auto;
 }
 
-.cont h2{
+.cont h4{
   color: #fff;
-  font-weight: 600;
-  font-size: 38px;
-  padding: 20px;
+  font-weight: 200;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 
 
-@media(min-width:20px){
+@media(max-width:700px){
 
-  main .myResult{
-    display: flex;
-    flex-direction: row;
-  }
+
   header{
     width: 75%;
   }
       
   h1{
-    color: #fff;
     font-size: 20px;
     font-weight: 800;
-    text-align: center;
-    background: rgba(34, 34, 34, 0.541);
-    border-radius: 0 0 80px 80px;
-    margin-top: -15px;
-    margin-bottom: 50px;
     padding: 20px;
     box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.479);
   }
-  .kenareham img{
 
-    height: 350px;
-  }
+  
   
 }

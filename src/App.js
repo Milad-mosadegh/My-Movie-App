@@ -81,15 +81,22 @@ function App() {
     <div >
       <header >
         <h1>Movie Database</h1>
+        <Search handleInput={handleInput} search={search} />
       </header>
 
       <div>
-        <MyTrying />
+        <MyTrying title="romantic" sub='Romantic Movie' />
+      </div>
+      <div>
+        <MyTrying title="war" sub='War Movie' />
+      </div>
+      <div>
+        <MyTrying title="music" sub='Music Movie' />
       </div>
 
       <main>
-        <Search handleInput={handleInput} search={search} />
         <div className="myResult">
+          <h2>Searched...</h2>
           <Results results={state.result} openPopup={openPopup} />
         </div>
         {state.selected.id ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
