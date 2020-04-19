@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
 import Search from './components/Search';
 
+
+
+
+
 import axios from 'axios'
 import Results from './components/results';
 import Popup from './components/Popup';
+import MyTrying from './components/MySL';
+
+
+
+
+
 
 
 
@@ -66,24 +76,28 @@ function App() {
   }
 
 
+
   return (
     <div >
       <header >
         <h1>Movie Database</h1>
       </header>
 
+      <div>
+        <MyTrying />
+      </div>
+
       <main>
         <Search handleInput={handleInput} search={search} />
-
         <div className="myResult">
           <Results results={state.result} openPopup={openPopup} />
         </div>
-
-
         {state.selected.id ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
-
-
       </main>
+
+
+
+
 
 
 
