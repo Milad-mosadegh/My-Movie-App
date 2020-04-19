@@ -137,7 +137,7 @@
     }
 
     .box:hover{
-        height: 230px;
+        height: 460px;
     }
 
     .box .imgBox{
@@ -148,9 +148,9 @@
         box-sizing: border-box;
     }
     .box .content h3{
-        font-size: 9px;
+        font-size: 20px;
         color: #fff;
-        font-weight: 300;
+        font-weight: 800;
         line-height: 10px;
         letter-spacing: 1px;
     }
