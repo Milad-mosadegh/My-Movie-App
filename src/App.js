@@ -7,6 +7,9 @@ import Popup from './components/Popup';
 
 
 
+
+
+
 function App() {
   const [state, setState] = useState({
     s: "",
@@ -71,9 +74,11 @@ function App() {
 
       <main>
         <Search handleInput={handleInput} search={search} />
-        <div>
+
+        <div className="myResult">
           <Results results={state.result} openPopup={openPopup} />
         </div>
+
 
         {state.selected.id ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
 

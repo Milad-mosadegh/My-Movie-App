@@ -3,10 +3,13 @@ import Result from './Result';
 
 
 const Results = ({ results, openPopup }) => {
+
     return (
+
         <section className="results">
             {results.map(result => <Result key={result.id} result={result} openPopup={openPopup} />)}
         </section>
+
     );
 }
 
