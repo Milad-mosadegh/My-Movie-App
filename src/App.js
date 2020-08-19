@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import Search from './components/Search';
 
+
+
 import axios from 'axios'
 import Results from './components/results';
 import Popup from './components/Popup';
 import MyTrying from './components/MySL';
+
 
 
 function App() {
@@ -62,19 +65,20 @@ function App() {
 
 
   return (
-    <div >
+    <div  >
+
       <header >
-        <h1>Movie Database</h1>
+        <h1>Movie Finder</h1>
       </header>
 
       <div>
         <MyTrying title="romantic" sub='Romantic Movie' />
       </div>
       <div>
-        <MyTrying title="war" sub='War Movie' />
+        <MyTrying title="war" sub='Action & War Movie' />
       </div>
       <div>
-        <MyTrying title="music" sub='Music Movie' />
+        <MyTrying title="music" sub='Musical Movie' />
       </div>
 
       <div className="search-container">
@@ -87,11 +91,6 @@ function App() {
         </div>
         {state.selected.id ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
       </main>
-
-
-
-
-
 
 
     </div>

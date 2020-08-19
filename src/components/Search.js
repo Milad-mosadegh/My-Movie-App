@@ -10,7 +10,7 @@ const Search = ({ handleInput, search }) => {
                 <input
                     type="text"
                     className="searchbox"
-                    placeholder="Search A Movie "
+                    placeholder="Search A Movie Name  "
                     onChange={handleInput}
                     onKeyDown={search}
                 />
