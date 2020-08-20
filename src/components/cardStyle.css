@@ -5,22 +5,11 @@
     font-family: 'Poppins',sans-serif;
 }
 
-/* body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 100vh;
-    background:#010615
-} */
 
 .box{
     position: relative;
     width: 300px;
     height: 400px;
- /*    display: flex;
-    justify-content: center;
-    align-items: center; */
     margin: 40px;
     background: #060c21;
     transition: 0.4s;
@@ -42,7 +31,6 @@
 
 .box .imgBox img{
     max-width: 100%;
-    /* height: 400px; */
     opacity: 0.1;
     transition: 0.5s;
 }
@@ -60,7 +48,6 @@
     bottom: -2px;
     background:#fff ;
     z-index: -1;
-
 }
 
 .box:after{
@@ -75,25 +62,6 @@
     filter: blur(10px);
 }
 
-/* .box:before,
-.box:after
-{
-    background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
-}
-
-.box:nth-child(2):before,
-.box:nth-child(2):after
-{
-        background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
-
-}
-
-.box:nth-child(3):before,
-.box:nth-child(3):after
-{
-        background: linear-gradient(235deg,#772aff,#010615,#2196F3);
-
-} */
 
 .box .content{
     position: absolute;

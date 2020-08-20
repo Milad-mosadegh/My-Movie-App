@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+
 
 
 
@@ -58,6 +61,7 @@ const MyTrying = ({ title, sub }) => {
             }
         ]
     };
+
     return (
         <div className="cont">
             <h4>{sub}</h4>
@@ -68,6 +72,7 @@ const MyTrying = ({ title, sub }) => {
                             <img src={imagePath + data.poster_path} alt="" />
                         </div>
                         <h3>{data.title}</h3>
+                        {/* <a style={linkstyle} href={<Popup />}>{data.title}</a> */}
                     </div>))
                     : null}
             </Slider>
